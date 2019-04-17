@@ -9,11 +9,12 @@ use Symfony\Component\Routing\Annotation\Route;
 final class IndexController extends AbstractController
 {
 	/**
-	 * @Route("/", name="index")
+	 * @Route("/{vueRouting}", name="index")
 	 * @return Response
 	 */
 	public function indexAction(): Response
 	{
 		return $this->render('base.html.twig', []);
 	}
+
 }
