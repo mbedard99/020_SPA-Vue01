@@ -34,6 +34,8 @@ services:
       MYSQL_DATABASE: foo
       MYSQL_USER: foo
       MYSQL_PASSWORD: bar
+    ports:
+      - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
       - ./services/mysql/utf8mb4.cnf:/etc/mysql/conf.d/utf8mb4.cnf:ro
