@@ -57,3 +57,4 @@
 /.idea/vcs.xml
 .idea/composerJson.xml
 .idea/php.xml
+/.env
