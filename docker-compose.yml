@@ -30,26 +30,28 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: "$MYSQL_ROOT_PASSWORD"
-      MYSQL_DATABASE: "$MYSQL_DATABASE"
-      MYSQL_USER: "$MYSQL_USER"
-      MYSQL_PASSWORD: "$MYSQL_PASSWORD"
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: foo
+      MYSQL_USER: foo
+      MYSQL_PASSWORD: bar
+    ports:
+      - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
       - ./services/mysql/utf8mb4.cnf:/etc/mysql/conf.d/utf8mb4.cnf:ro
 
-    phpmyadmin:
-      image: phpmyadmin/phpmyadmin:4.7
-      labels:
-        - traefik.enable=true
-        - traefik.backend=phpmyadmin
-        - traefik.frontend.rule=Host:phpadmin.app.localhost
-      environment:
-        PMA_HOST: mysql
-        PMA_USER: "$MYSQL_USER"
-        PMA_PASSWORD: "$MYSQL_PASSWORD"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.7
+    labels:
+      - traefik.enable=true
+      - traefik.backend=phpmyadmin
+      - traefik.frontend.rule=Host:phpadmin.app.localhost
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: foo
+      PMA_PASSWORD: bar
 
-  volumes:
+volumes:
 
-    mysql_data:
-      driver: local
+  mysql_data:
+    driver: local

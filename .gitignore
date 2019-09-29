@@ -58,3 +58,11 @@
 .idea/composerJson.xml
 .idea/php.xml
 /.env
+/sources/app/bin/
+/sources/app/var/
+/sources/app/vendor/
+.idea/dictionaries/
+.idea/markdown-navigator.xml
+.idea/markdown-navigator/
+sources/app/.env
+sources/app/bin/

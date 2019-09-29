@@ -1,12 +1,9 @@
 SOURCE: https://thecodingmachine.io/building-a-single-page-application-with-symfony-4-and-vuejs
 
-
 **PHP:**
-
 
 **Javascript:**
 Axios = Faire les appels ajax
-
 
 **Vue**
 vue-router: Router Vue
@@ -14,7 +11,6 @@ Vuex: State management pattern + library for Vue.js applications.
 
 Compose Prestissimo: Composer parallel install plugin
 Traefik: Reverse Proxy
-
 
 Access php-apache shell
 docker-compose exec app bash
