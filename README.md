@@ -27,9 +27,12 @@ $ composer require thecodingmachine/safe
 $ composer require --dev thecodingmachine/phpstan-safe-rule
 
 Every time you push your modifications to your repository, don't forget to run 
+````
 composer csfix && composer cscheck && composer phpstan
+````
 
 
+````
 $ php bin/console doctrine:migrations:diff
 $ php bin/console doctrine:migrations:migrate
-
+````
