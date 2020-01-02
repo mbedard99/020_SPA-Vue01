@@ -31,8 +31,14 @@ Every time you push your modifications to your repository, don't forget to run
 composer csfix && composer cscheck && composer phpstan
 ````
 
-
+**DOCTRINE**
 ````
 $ php bin/console doctrine:migrations:diff
 $ php bin/console doctrine:migrations:migrate
 ````
+
+**Unit Testing**
+````
+$ php bin/phpunit
+````
+

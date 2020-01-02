@@ -12,6 +12,7 @@ use function Safe\json_decode;
 use function Safe\json_encode;
 
 abstract class AbstractControllerWebTestCase extends WebTestCase {
+
 	/** @var KernelBrowser */
 	protected $client;
 
