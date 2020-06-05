@@ -67,3 +67,4 @@
 sources/app/.env
 sources/app/bin/
 .idea/inspectionProfiles/
+.idea/jsLibraryMappings.xml
